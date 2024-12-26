@@ -7,7 +7,7 @@ const NavRoutes = () => {
     <BrowserRouter>
       <Routes>
         <Route element={<DefauultLayout></DefauultLayout>}>
-          {RoutingPath.map((page, index) => {
+          {RoutingPath.map((page) => {
             return (
               <>
                 <Route path={page.path} element={page.element}></Route>
