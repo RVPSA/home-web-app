@@ -83,9 +83,39 @@ const Navbar = () => {
           }  p-6  absolute top-15 right-0 rounded-xl z-10 min-w-[140px]`}
         >
           <ul className="list-none flex flex-col justify-end items-start gap-2">
-            <li>Home</li>
-            <li>Gallery</li>
-            <li>Contact Us</li>
+          <li
+          onClick={() => {
+            navigate("/");
+          }}
+          className={`${
+            active === "Home" &&
+            "text-white bg-gradient-to-r from-lima-800 to-lima-700"
+          } cursor-pointer rounded-md p-4 hover:bg-gradient-to-r from-lima-700`}
+        >
+          Home
+        </li>
+        <li
+          onClick={() => {
+            navigate("/gallery");
+          }}
+          className={`${
+            active === "Gallery" &&
+            "text-white bg-gradient-to-r from-lima-800 to-lima-700"
+          } cursor-pointer rounded-md p-4 hover:bg-gradient-to-r from-lima-700`}
+        >
+          Gallery
+        </li>
+        <li
+          onClick={() => {
+            navigate("/contact");
+          }}
+          className={`${
+            active === "Contact Us" &&
+            "text-white bg-gradient-to-r from-lima-800 to-lima-700"
+          } cursor-pointer rounded-md p-4 hover:bg-gradient-to-r from-lima-700`}
+        >
+          Contact Us
+        </li>
           </ul>
         </div>
       </div>
