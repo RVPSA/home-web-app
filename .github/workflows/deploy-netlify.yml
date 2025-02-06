@@ -39,8 +39,7 @@ jobs:
       - name: Deploy to netlify
         uses: jsmrcaga/action-netlify-deploy@v2.0.0
         with:
-          name: production-files
-          path: dist
+          build_directory: dist
           NETLIFY_AUTH_TOKEN: ${{ secrets.SECRET_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.SITE_ID }}
           install_command: "echo Skipping installing the dependencies"
