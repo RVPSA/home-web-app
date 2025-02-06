@@ -1,10 +1,10 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import DefauultLayout from "./DefaultLayout";
 import { RoutingPath } from "./RoutingPath";
 
 const NavRoutes = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route element={<DefauultLayout></DefauultLayout>}>
           {RoutingPath.map((page) => {
@@ -16,7 +16,7 @@ const NavRoutes = () => {
           })}
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
