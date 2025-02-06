@@ -41,3 +41,5 @@ jobs:
         with:
           NETLIFY_AUTH_TOKEN: ${{ secrets.SECRET_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.SITE_ID }}
+          install_command: "echo Skipping installing the dependencies"
+          build_command: "echo Skipping building the web files"
