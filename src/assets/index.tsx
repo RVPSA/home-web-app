@@ -12,6 +12,7 @@ import leaf from "./leaf.jpg";
 import guestHouse2_1 from "./guestHouse2.1.png";
 import vision from "./vision.jpg";
 import QR from "./QR.png";
+import resort from './resort.jpg'
 
 import { homePic } from "./home";
 
@@ -29,5 +30,6 @@ export {
   fb,
   phone,
   location,
-  QR
+  QR,
+  resort
 };
