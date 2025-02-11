@@ -101,7 +101,7 @@ const NavbarNew = () => {
           <div
             className={`${
               toggle ? "flex" : "hidden"
-            } absolute z-20 min-h-screen top-24 -right-3 w-screen flex-col items-start pl-8 gap-7 touch-none`}
+            } absolute z-20 min-h-screen top-[90px] -right-3 w-screen flex-col items-start pl-8 gap-7 touch-none bg-white`}
           >
             <div
               className={`${
@@ -112,6 +112,7 @@ const NavbarNew = () => {
                 name="Home"
                 onClick={() => {
                   navigate("/");
+                  setToggle(!toggle);
                 }}
               ></Button>
             </div>
@@ -125,6 +126,7 @@ const NavbarNew = () => {
                 name="Gallery"
                 onClick={() => {
                   navigate("/gallery");
+                  setToggle(!toggle);
                 }}
               ></Button>
             </div>
@@ -138,6 +140,7 @@ const NavbarNew = () => {
                 name="Contact Us"
                 onClick={() => {
                   navigate("/contact");
+                  setToggle(!toggle);
                 }}
               ></Button>
             </div>
