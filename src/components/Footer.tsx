@@ -2,7 +2,7 @@ import { email, phone, whatsApp } from "../assets";
 
 const Footer = () => {
   return (
-    <div className="bg-black/50 w-full py-5">
+    <div className="bg-black/75 w-full py-5 text-white">
       <div className="grid grid-cols-2">
         <div className="col-span-1 grid justify-items-center">
           Deeghayu Resort
