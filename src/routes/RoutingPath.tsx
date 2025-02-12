@@ -1,6 +1,6 @@
 import Gallery from "../pages/Gallery";
 import Contact from "../pages/Contact";
-import Homepage from "../pages/Homepage";
+import Homepage from "../pages/HomePage";
 
 //Details for admin Login DropDown
 export const RoutingPath: any[] = [

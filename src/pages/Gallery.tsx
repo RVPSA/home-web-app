@@ -1,29 +1,32 @@
 import { homePic } from "../assets";
+import PictureCard from "../components/PictureCard";
+
 const Gallery = () => {
   return (
-    <div>
-      <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-1 p-5">
-        {homePic.map((pic, index) => (
-          <div
-            className="relative hover:scale-105 rounded-lg transform transition-transform duration-300"
-            key={index}
-          >
-            <div className="absolute inset-0 z-10 flex hover:opacity-0">
-              <div className="absolute inset-0 bg-black opacity-70"></div>
-              <div className="mx-auto text-white z-10 self-center uppercase tracking-widest text-sm">
-                {pic.alt}
-              </div>
+    <>
+      <div className="grid grid-cols-12 gap-4 p-5">
+        {homePic.map((data, index) => {
+          return (
+            <div className="col-span-6 md:col-span-4 h-full" key={index}>
+              <PictureCard
+                pictureURL={data.picurl}
+                pictureAlt={data.alt}
+                pictureDescription={data.alt}
+              ></PictureCard>
             </div>
-
-            <img
-              src={pic.picurl}
-              alt={pic.alt}
-              className="object-cover w-full h-full rounded-lg shadow-lg "
-            />
-          </div>
-        ))}
+          );
+        })}
+        {/* <div className="col-span-6 md:col-span-4">
+          <img src={homeFull} alt="" className="w-full h-full object-fill" />
+        </div>
+        <div className="col-span-6 md:col-span-4">
+        <img src={homeFull} alt="" className="w-full h-full object-fill" />
+        </div>
+        <div className="col-span-6 md:col-span-4">
+        <img src={homeFull} alt="" className="w-full h-full object-fill" />
+        </div> */}
       </div>
-    </div>
+    </>
   );
 };
 
